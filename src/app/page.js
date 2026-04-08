@@ -28,23 +28,20 @@ const blogPosts = [
 
 export default function Home() {
   return (
-    <main className="flex flex-col ">
-      <h1 className="text-2xl font-medium text-neutral-900 dark:text-neutral-50">
-        Enis Gültekin
-      </h1>
-      <p className="text-neutral-900 dark:text-neutral-400 mt-4 text-lg">
+    <section className="flex flex-col">
+      <p className="text-neutral-700 dark:text-neutral-400 mt-4 text-lg">
         I&apos;m a frontend developer. I consider writing and explaining things
         to be the most important part of truly learning a subject. I write and
         share blog posts about JavaScript and my experiences here. I also keep a
         list of the books I&apos;ve read.
       </p>
       <div className="flex flex-row justify-between items-center mt-8">
-        <p className="text-neutral-900 dark:text-neutral-400 text-lg">
+        <p className="text-neutral-700 dark:text-neutral-400 text-lg">
           My latest blog posts:
         </p>
         <Link
           href="/blog"
-          className="text-neutral-400 dark:hover:text-neutral-500 transition-colors duration-200 underline underline-offset-4 decoration-neutral-700"
+          className="ml-auto text-neutral-700 dark:text-neutral-400  dark:hover:text-neutral-500 transition-colors duration-200 underline underline-offset-5 dark:decoration-neutral-700 decoration-neutral-400"
         >
           All blog posts
         </Link>
@@ -56,7 +53,7 @@ export default function Home() {
               href={post.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-neutral-50 dark:hover:text-neutral-400 transition-colors duration-200"
+              className="text-neutral-950 hover:text-neutral-600 dark:text-neutral-50  dark:hover:text-neutral-400 transition-colors duration-200"
             >
               {post.title}
             </Link>
@@ -64,7 +61,7 @@ export default function Home() {
         ))}
       </ul>
 
-      <p className="text-neutral-900 dark:text-neutral-400 mt-8 text-lg">
+      <p className="text-neutral-700 dark:text-neutral-400 text-lg mt-4">
         You can find me on the following platforms:
       </p>
       <ul className="list-disc list-inside mt-4 ml-4 flex flex-col gap-1">
@@ -74,13 +71,26 @@ export default function Home() {
               href={link.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-neutral-50 dark:hover:text-neutral-400 transition-colors duration-200"
+              className="text-neutral-950 hover:text-neutral-600 dark:text-neutral-50  dark:hover:text-neutral-400 transition-colors duration-200"
             >
               {link.label}
             </Link>
           </li>
         ))}
       </ul>
-    </main>
+
+      <div className="flex flex-row items-center mt-8">
+        <p className="text-neutral-700 dark:text-neutral-400">Reading:</p>
+        <span className="text-neutral-950 dark:text-neutral-50 ml-1 italic">
+          Alex Ferguson: My Autobiography - Sir Alex Ferguson
+        </span>
+        <Link
+          href="/readings"
+          className="ml-auto text-neutral-700 dark:text-neutral-400  dark:hover:text-neutral-500 transition-colors duration-200 underline underline-offset-5 dark:decoration-neutral-700 decoration-neutral-400"
+        >
+          All readings
+        </Link>
+      </div>
+    </section>
   );
 }
