@@ -1,5 +1,7 @@
-import { Geist, Geist_Mono, STIX_Two_Text } from "next/font/google";
+import { STIX_Two_Text } from "next/font/google";
 import "./globals.css";
+import { ThemeProvider } from "next-themes";
+import { Header } from "components";
 
 const stixTwoText = STIX_Two_Text({
   variable: "--font-stix-two-text",
@@ -13,11 +15,18 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${stixTwoText.variable} h-full antialiased`}>
-      <body className="min-h-full flex flex-col">
-        <div className="mx-auto w-full md:max-w-2xl mt-8 md:mt-24">
-          {children}
-        </div>
+    <html
+      lang="en"
+      className={`${stixTwoText.variable} h-full antialiased`}
+      suppressHydrationWarning
+    >
+      <body className="min-h-full flex flex-col md:max-w-2xl mx-auto w-full bg-neu dark:bg-neutral-900">
+        <ThemeProvider defaultTheme="system" enableSystem>
+          <>
+            <Header />
+            {children}
+          </>
+        </ThemeProvider>
       </body>
     </html>
   );
