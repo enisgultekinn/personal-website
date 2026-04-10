@@ -47,7 +47,7 @@ const components = {
   a: CustomLink,
   p: props => (
     <p
-      className="mb-6 leading-relaxed text-neutral-950 dark:text-neutral-200 text-lg"
+      className="mb-6 leading-relaxed text-neutral-950 dark:text-neutral-100 text-lg"
       {...props}
     >
       {props.children}
@@ -56,7 +56,7 @@ const components = {
   pre: CodeBlock,
   h3: props => (
     <h3
-      className="mb-4 text-2xl text-neutral-950 dark:text-neutral-200 font-semibold tracking-tight"
+      className="mb-4 text-2xl text-neutral-950 dark:text-neutral-100 font-semibold tracking-tight"
       {...props}
     >
       {props.children}
@@ -64,7 +64,7 @@ const components = {
   ),
   h4: props => (
     <h4
-      className="mb-2 text-xl  text-neutral-950 dark:text-neutral-200 font-semibold tracking-tight"
+      className="mb-2 text-xl  text-neutral-950 dark:text-neutral-100 font-semibold tracking-tight"
       {...props}
     >
       {props.children}
@@ -72,7 +72,7 @@ const components = {
   ),
   ol: props => (
     <ol
-      className="mb-6 list-inside list-decimal text-neutral-950 dark:text-neutral-200 tracking-tight"
+      className="mb-6 list-inside list-decimal text-neutral-950 dark:text-neutral-100 tracking-tight"
       {...props}
     >
       {props.children}
@@ -80,7 +80,7 @@ const components = {
   ),
   li: props => (
     <li
-      className="mb-3 leading-relaxed text-neutral-950 dark:text-neutral-200 text-lg"
+      className="mb-3 leading-relaxed text-neutral-950 dark:text-neutral-100 text-lg"
       {...props}
     >
       {props.children}
@@ -88,7 +88,7 @@ const components = {
   ),
   ul: props => (
     <ul
-      className="mb-6 list-inside list-disc text-neutral-950 dark:text-neutral-200"
+      className="mb-6 list-inside list-disc text-neutral-950 dark:text-neutral-100"
       {...props}
     >
       {props.children}
@@ -97,7 +97,7 @@ const components = {
   blockquote: props => {
     return (
       <blockquote
-        className="mb-12 mt-10 border-l-4 border-neutral-300 pl-4 text-base dark:border-neutral-700 text-neutral-950 dark:text-neutral-200"
+        className="mb-12 mt-10 border-l-4 border-neutral-300 pl-4 text-base dark:border-neutral-700 text-neutral-950 dark:text-neutral-100"
         {...props}
       >
         {props.children}
@@ -121,7 +121,7 @@ const components = {
   ),
   th: props => (
     <th
-      className="border-y border-neutral-200 px-2 py-3 text-left text-xs font-medium text-neutral-600 dark:border-neutral-700 dark:text-neutral-200"
+      className="border-y border-neutral-200 px-2 py-3 text-left text-xs font-medium text-neutral-600 dark:border-neutral-700 dark:text-neutral-100"
       {...props}
     >
       {props.children}
@@ -129,7 +129,7 @@ const components = {
   ),
   td: props => (
     <td
-      className="border-b border-neutral-200 px-2 py-3 text-xs text-neutral-500 dark:border-neutral-700 dark:text-neutral-300"
+      className="border-b border-neutral-200 px-2 py-3 text-xs text-neutral-500 dark:border-neutral-700 dark:text-neutral-100"
       {...props}
     >
       {props.children}

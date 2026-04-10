@@ -72,7 +72,7 @@ export default function Home() {
       </ul>
 
       <div className="flex flex-row items-center mt-8">
-        <p className="text-neutral-950 dark:text-neutral-400 font-medium text-lg">
+        <p className="text-neutral-950 dark:text-neutral-400 text-lg">
           Reading:
         </p>
         <span className="text-neutral-950 dark:text-neutral-50 ml-1 italic text-lg">
