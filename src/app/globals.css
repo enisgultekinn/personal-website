@@ -1,10 +1,16 @@
-@import "tailwindcss";
+@import 'tailwindcss';
+@plugin "@tailwindcss/typography";
 
 @custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+
+@theme {
+  --font-stix-two-text: var(--font-stix-two-text);
+}
 
 body {
   font-family: var(--font-stix-two-text);
 }
+
 @keyframes theme-toggle {
   0% {
     opacity: 0;
@@ -18,4 +24,9 @@ body {
 
 .animate-theme-toggle {
   animation: theme-toggle 0.3s ease-out forwards;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-color: #f1f1f1 transparent;
 }
