@@ -28,7 +28,7 @@ export default function RootLayout({ children }) {
       className={`${ebGaramond.variable} ${jetBrainsMono.variable} antialiased`}
       suppressHydrationWarning
     >
-      <body className="min-h-full flex flex-col md:max-w-2xl mx-auto w-full bg-[#f5f3ee] dark:bg-neutral-900">
+      <body className="min-h-full flex flex-col md:max-w-2xl mx-auto w-full bg-[#f5f3ee] dark:bg-neutral-900 px-4 md:px-0 pb-24">
         <ThemeProvider
           attribute="data-theme"
           defaultTheme="system"

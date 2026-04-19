@@ -3,7 +3,7 @@
 import { useTheme } from 'next-themes';
 import { usePathname } from 'next/navigation';
 import useIsMounted from '@/hooks/useIsMounted';
-import { GitBranch, MoonStar, Sun } from 'lucide-react';
+import { MoonStar, Sun } from 'lucide-react';
 import Link from 'next/link';
 import classNames from 'classnames';
 
@@ -39,19 +39,19 @@ const Header = () => {
     <header className="mt-8 md:mt-24">
       <div className="flex flex-row justify-between items-center">
         <Link
-          className="text-2xl font-medium cursor-pointer text-neutral-900 dark:text-neutral-50"
+          className="text-lg md:text-2xl font-medium cursor-pointer text-neutral-900 dark:text-neutral-50"
           href="/"
         >
           Enis Gültekin
         </Link>
         <div className="flex flex-row items-center">
-          <nav className="flex flex-row items-center gap-6">
+          <nav className="flex flex-row items-center gap-4 md:gap-6">
             {MENU.map(({ label, href }) => (
               <Link
                 key={href}
                 href={href}
                 className={classNames(
-                  'relative text-base pb-0.5 group transition-colors duration-300',
+                  'relative text-sm md:text-base pb-0.5 group transition-colors duration-300',
                   {
                     'text-neutral-900 dark:text-neutral-50':
                       currentPath === href,
@@ -73,15 +73,18 @@ const Header = () => {
               </Link>
             ))}
           </nav>
-          <button className="cursor-pointer ml-8" onClick={handleThemeToggle}>
+          <button
+            className="cursor-pointer ml-4 md:ml-8"
+            onClick={handleThemeToggle}
+          >
             {resolvedTheme === 'dark' ? (
               <Sun
-                className="w-5 h-5 animate-theme-toggle dark:text-neutral-50 text-neutral-900"
+                className="w-4 h-4 md:w-5 md:h-5 animate-theme-toggle dark:text-neutral-50 text-neutral-900"
                 strokeWidth={1.5}
               />
             ) : (
               <MoonStar
-                className="w-5 h-5 animate-theme-toggle dark:text-neutral-50 text-neutral-900"
+                className="w-4 h-4 md:w-5 md:h-5 animate-theme-toggle dark:text-neutral-50 text-neutral-900"
                 strokeWidth={1.5}
               />
             )}

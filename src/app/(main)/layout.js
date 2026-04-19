@@ -21,7 +21,7 @@ export default function MainLayout({ children }) {
     <>
       <Header />
       {children}
-      <footer className="pt-16 text-neutral-600 dark:text-neutral-400">
+      <footer className="pt-8 md:pt-16 text-neutral-600 dark:text-neutral-400">
         <div className="flex flex-row items-center gap-4">
           {socialLinks.map(({ href, label }) => (
             <Link key={href} href={href}>

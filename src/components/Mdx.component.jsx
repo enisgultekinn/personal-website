@@ -36,8 +36,10 @@ function RoundedImage(props) {
 
 function CodeBlock({ children }) {
   return (
-    <div className="prose   dark:prose-neutral my-8 no-scrollbar">
-      <pre className="my-8 overflow-x-scroll rounded-lg p-4">{children}</pre>
+    <div className="prose dark:prose-neutral my-8 no-scrollbar">
+      <pre className="my-8 overflow-x-scroll rounded-lg p-4 text-sm md:text-base">
+        {children}
+      </pre>
     </div>
   );
 }
@@ -47,7 +49,7 @@ const components = {
   a: CustomLink,
   p: props => (
     <p
-      className="mb-6 leading-relaxed text-neutral-950 dark:text-neutral-100 text-lg"
+      className="mb-6 leading-relaxed text-neutral-950 dark:text-neutral-50 text-base md:text-lg"
       {...props}
     >
       {props.children}
@@ -80,7 +82,7 @@ const components = {
   ),
   li: props => (
     <li
-      className="mb-3 leading-relaxed text-neutral-950 dark:text-neutral-100 text-lg"
+      className="mb-3 leading-relaxed text-neutral-950 dark:text-neutral-100 text-base md:text-lg"
       {...props}
     >
       {props.children}
@@ -97,7 +99,7 @@ const components = {
   blockquote: props => {
     return (
       <blockquote
-        className="mb-12 mt-10 border-l-4 border-neutral-300 pl-4 text-base dark:border-neutral-700 text-neutral-950 dark:text-neutral-100"
+        className="mb-12 mt-10 border-l-4 border-neutral-300 pl-4 text-sm md:text-base dark:border-neutral-700 text-neutral-950 dark:text-neutral-100"
         {...props}
       >
         {props.children}
@@ -106,7 +108,7 @@ const components = {
   },
   code: props => (
     <code
-      className="rounded-md text-neutral-950 dark:text-neutral-50 text-base"
+      className="rounded-md text-neutral-950 dark:text-neutral-50 text-sm md:text-base"
       {...props}
     >
       {props.children}

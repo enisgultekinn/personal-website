@@ -1,6 +1,7 @@
 import { allPosts } from 'content-collections';
 import { Mdx, ViewTracker } from '@/components';
 import { notFound } from 'next/navigation';
+import Balancer from 'react-wrap-balancer';
 
 export async function generateStaticParams() {
   return allPosts.map(post => ({
@@ -18,8 +19,8 @@ export default async function Blog({ params }) {
 
   return (
     <section className="mt-8 md:mt-24">
-      <h1 className="text-3xl font-semibold">{post.title}</h1>
-      <div className="flex flex-row items-center gap-2.5 text-neutral-700 dark:text-neutral-400 text-base mt-2 mb-6">
+      <h1 className="md:text-3xl text-2xl font-semibold">{post.title}</h1>
+      <div className="flex flex-row items-center gap-2.5 text-neutral-700 dark:text-neutral-400 md:text-base text-sm mt-2  mb-4 md:mb-6">
         <time>
           {new Date(post.date).toLocaleDateString('en-US', {
             month: 'long',
