@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@tailwindcss/typography": "^0.5.19",
+    "classnames": "^2.5.1",
     "framer-motion": "^12.38.0",
     "lucide-react": "^1.7.0",
     "next": "16.2.1",
@@ -18,7 +19,8 @@
     "react-dom": "19.2.4",
     "rehype-pretty-code": "^0.14.3",
     "remark": "^15.0.1",
-    "remark-gfm": "^4.0.1"
+    "remark-gfm": "^4.0.1",
+    "shiki": "^4.0.2"
   },
   "devDependencies": {
     "@content-collections/core": "^0.14.3",

@@ -1,5 +1,6 @@
 import { allPosts } from 'content-collections';
 import Link from 'next/link';
+import { BlogListItem } from '@/components';
 
 const links = [
   {
@@ -23,67 +24,27 @@ export default function Home() {
 
   return (
     <section className="flex flex-col">
-      <p className="text-neutral-950 dark:text-neutral-400 mt-4 text-lg">
-        I&apos;m a frontend developer. I consider writing and explaining things
-        to be the most important part of truly learning a subject. I write and
-        share blog posts about JavaScript and my experiences here. I also keep a
-        list of the books I&apos;ve read.
+      <p className="text-lg mt-8 text-neutral-900 dark:text-neutral-50">
+        I&apos;m a frontend developer based in Istanbul. I consider writing and
+        explaining things to be the most important part of truly learning a
+        subject. I write and share blog posts about JavaScript and my
+        experiences here. I also keep a list of the tv series & movies I&apos;ve
+        watched.
       </p>
-      <div className="flex flex-row justify-between items-center mt-8">
-        <p className="text-neutral-950 dark:text-neutral-400 text-lg">
-          My latest blog posts:
-        </p>
-        <Link
-          href="/blog"
-          className="ml-auto text-neutral-950 dark:text-neutral-400 dark:hover:text-neutral-500 transition-colors duration-200 underline underline-offset-5 dark:decoration-neutral-700 decoration-neutral-400 font-medium"
-        >
-          All blog posts
-        </Link>
-      </div>
-      <ul className="list-disc list-inside mt-4 ml-4 flex flex-col gap-1">
+      <span className="text-lg mt-8 text-neutral-900 dark:text-neutral-50">
+        My latest blog posts:
+      </span>
+      <div className="gap-2 mt-4 flex flex-col">
         {latestPosts.map(post => (
-          <li key={post.title}>
-            <Link
-              href={`/blog/${post._meta.path}`}
-              className="text-neutral-950 hover:text-neutral-600 dark:text-neutral-50 dark:hover:text-neutral-400 text-lg transition-colors duration-200"
-            >
-              {post.title}
-            </Link>
-          </li>
+          <Link
+            key={post._meta.path}
+            href={`/blog/${post._meta.path}`}
+            className="ml-4 text-lg flex flex-row items-center gap-4 text-neutral-900 dark:text-neutral-50 hover:text-neutral-700 dark:hover:text-neutral-400 transition-colors duration-300"
+          >
+            <div className="w-1 h-1 rounded-full bg-neutral-900 dark:bg-neutral-50" />
+            {post.title}
+          </Link>
         ))}
-      </ul>
-
-      <p className="text-neutral-950 dark:text-neutral-400 mt-8 text-lg">
-        You can find me on the following platforms:
-      </p>
-      <ul className="list-disc list-inside mt-4 ml-4 flex flex-col gap-1">
-        {links.map(link => (
-          <li key={link.label}>
-            <Link
-              href={link.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-neutral-950 hover:text-neutral-600 dark:text-neutral-50  dark:hover:text-neutral-400 text-lg transition-colors duration-200"
-            >
-              {link.label}
-            </Link>
-          </li>
-        ))}
-      </ul>
-
-      <div className="flex flex-row items-center mt-8">
-        <p className="text-neutral-950 dark:text-neutral-400 text-lg">
-          Reading:
-        </p>
-        <span className="text-neutral-950 dark:text-neutral-50 ml-1 italic text-lg">
-          Alex Ferguson: My Autobiography - Sir Alex Ferguson
-        </span>
-        <Link
-          href="/readings"
-          className="ml-auto text-neutral-700 dark:text-neutral-400  dark:hover:text-neutral-500 transition-colors duration-200 underline underline-offset-5 dark:decoration-neutral-700 decoration-neutral-400 font-medium"
-        >
-          All readings
-        </Link>
       </div>
     </section>
   );

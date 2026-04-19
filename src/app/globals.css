@@ -4,11 +4,12 @@
 @custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
 
 @theme {
-  --font-stix-two-text: var(--font-stix-two-text);
+  --font-eb-garamond: var(--font-eb-garamond);
+  --font-jetbrains-mono: var(--font-jetbrains-mono);
 }
 
 body {
-  font-family: var(--font-stix-two-text);
+  font-family: var(--font-eb-garamond);
 }
 
 @keyframes theme-toggle {

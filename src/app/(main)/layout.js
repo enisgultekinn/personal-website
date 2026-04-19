@@ -1,10 +1,35 @@
 import { Header } from '@/components';
+import Link from 'next/link';
 
-export default function WithHeaderLayout({ children }) {
+const socialLinks = [
+  {
+    href: 'https://github.com/enisgultekin',
+    label: 'github'
+  },
+  {
+    href: 'https://www.linkedin.com/in/enisgultekin/',
+    label: 'linkedin'
+  },
+  {
+    href: 'mailto:enisgultekin@gmail.com',
+    label: 'email'
+  }
+];
+
+export default function MainLayout({ children }) {
   return (
     <>
       <Header />
       {children}
+      <footer className="pt-16 text-neutral-600 dark:text-neutral-400">
+        <div className="flex flex-row items-center gap-4">
+          {socialLinks.map(({ href, label }) => (
+            <Link key={href} href={href}>
+              {label}
+            </Link>
+          ))}
+        </div>
+      </footer>
     </>
   );
 }
