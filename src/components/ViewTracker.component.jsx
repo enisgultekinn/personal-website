@@ -7,7 +7,7 @@ import { motion, useMotionValue, useTransform, animate } from 'framer-motion';
 const fetcher = url => fetch(url).then(res => res.json());
 
 export default function ViewTracker({ slug }) {
-  const { data } = useSWR(`/api/views/${slug}`, fetcher);
+  const { data } = useSWR(`/api/views/${slug}`, fetcher, { revalidateOnFocus: false });
   const count = useMotionValue(0);
   const rounded = useTransform(count, v => Math.round(v));
 
