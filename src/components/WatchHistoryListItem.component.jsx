@@ -8,7 +8,7 @@ const WatchHistoryListItem = ({ item }) => {
         <span className="text-neutral-900 dark:text-neutral-50 text-lg dark:group-hover:text-neutral-200 group-hover:text-neutral-600 transition-colors duration-200">
           {item.title}
           <span className="text-sm text-neutral-900 dark:text-neutral-400 ml-2 italic">
-            {item.year}
+            {item.year || item.season}
           </span>
         </span>
       </div>
