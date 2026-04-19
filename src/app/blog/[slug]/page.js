@@ -1,5 +1,5 @@
 import { allPosts } from 'content-collections';
-import { Mdx } from '@/components';
+import { Mdx, ViewTracker } from '@/components';
 import { notFound } from 'next/navigation';
 
 export async function generateStaticParams() {
@@ -29,6 +29,9 @@ export default async function Blog({ params }) {
         </time>
         <span>•</span>
         <span>{post.readingTime} min read</span>
+        <div className="ml-auto">
+          <ViewTracker slug={slug} />
+        </div>
       </div>
       <Mdx content={post.mdx} />
     </section>
