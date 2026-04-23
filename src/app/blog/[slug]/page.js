@@ -1,7 +1,6 @@
 import { allPosts } from 'content-collections';
 import { Mdx, ViewTracker } from '@/components';
 import { notFound } from 'next/navigation';
-import Balancer from 'react-wrap-balancer';
 
 export async function generateStaticParams() {
   return allPosts.map(post => ({
