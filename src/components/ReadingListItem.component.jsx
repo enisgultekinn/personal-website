@@ -1,4 +1,4 @@
-const WatchHistoryListItem = ({ item }) => {
+const ReadingListItem = ({ item }) => {
   return (
     <div
       key={item.title}
@@ -8,24 +8,21 @@ const WatchHistoryListItem = ({ item }) => {
         <span className="text-neutral-900 dark:text-neutral-50 text-base md:text-lg dark:group-hover:text-neutral-200 group-hover:text-neutral-600 transition-colors duration-200">
           {item.title}
           <span className="text-xs md:text-sm text-neutral-900 dark:text-neutral-400 ml-2 italic">
-            {item.year || item.season}
+            {item.author}
           </span>
         </span>
       </div>
       <div className="flex flex-row items-center">
-        <span className="text-sm md:text-lg text-neutral-900 dark:text-neutral-50 flex">
-          {Number(item.rating).toFixed(1)}
-          <span className="text-xs md:text-base items-center  text-neutral-900 dark:text-neutral-500 md:ml-4 ml-2 flex md:w-20 w-16 justify-end">
-            {item.date.toLocaleDateString('en-US', {
-              year: 'numeric',
-              month: 'short',
-              day: 'numeric'
-            })}
-          </span>
+        <span className="text-xs md:text-base items-center text-neutral-900 dark:text-neutral-500 flex justify-end">
+          {item.date.toLocaleDateString('en-US', {
+            year: 'numeric',
+            month: 'short',
+            day: 'numeric'
+          })}
         </span>
       </div>
     </div>
   );
 };
 
-export default WatchHistoryListItem;
+export default ReadingListItem;

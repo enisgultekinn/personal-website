@@ -17,8 +17,8 @@ const MENU = [
     href: '/blog'
   },
   {
-    label: 'Watch History',
-    href: '/watch-history'
+    label: 'Readings',
+    href: '/readings'
   }
 ];
 
