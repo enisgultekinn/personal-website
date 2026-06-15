@@ -1,6 +1,12 @@
 import { allPosts } from 'content-collections';
 import { BlogListItem } from '@/components';
 
+export const metadata = {
+  title: 'Blog',
+  description:
+    'Notes on JavaScript, experiences and the occasional tangent.'
+};
+
 export default function BlogList() {
   const posts = allPosts.sort((a, b) => new Date(b.date) - new Date(a.date));
   return (

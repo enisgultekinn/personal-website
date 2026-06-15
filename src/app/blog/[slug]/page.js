@@ -1,6 +1,33 @@
 import { allPosts } from 'content-collections';
 import { Mdx, ViewTracker } from '@/components';
 import { notFound } from 'next/navigation';
+import { url } from '@/config';
+
+export async function generateMetadata({ params }) {
+  const { slug } = await params;
+  const post = allPosts.find(post => post._meta.path === slug);
+
+  if (!post) return {};
+
+  return {
+    title: post.title,
+    description: post.description,
+    openGraph: {
+      title: post.title,
+      description: post.description,
+      url: `${url}/blog/${slug}`,
+      type: 'article',
+      publishedTime: new Date(post.date).toISOString(),
+      images: [{ url: '/og_image.png' }]
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: post.title,
+      description: post.description,
+      images: ['/og_image.png']
+    }
+  };
+}
 
 export async function generateStaticParams() {
   return allPosts.map(post => ({

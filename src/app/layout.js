@@ -2,6 +2,7 @@ import { EB_Garamond } from 'next/font/google';
 import './globals.css';
 import { ThemeProvider } from 'next-themes';
 import { JetBrains_Mono } from 'next/font/google';
+import { title, description, url } from '@/config';
 
 const ebGaramond = EB_Garamond({
   variable: '--font-eb-garamond',
@@ -16,9 +17,33 @@ const jetBrainsMono = JetBrains_Mono({
 });
 
 export const metadata = {
-  title: 'Enis Gültekin',
-  description:
-    'Enis Gültekin is a frontend developer and writer. He writes about JavaScript and his experiences here.'
+  metadataBase: new URL(url),
+  title: {
+    default: title,
+    template: `%s | ${title}`
+  },
+  description,
+  alternates: {
+    canonical: '/',
+    types: {
+      'application/rss+xml': `${url}/rss.xml`
+    }
+  },
+  openGraph: {
+    title,
+    description,
+    url,
+    siteName: title,
+    locale: 'en_US',
+    type: 'website',
+    images: [{ url: '/og_image.png' }]
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title,
+    description,
+    images: ['/og_image.png']
+  }
 };
 
 export default function RootLayout({ children }) {

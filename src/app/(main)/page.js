@@ -1,6 +1,5 @@
 import { allPosts } from 'content-collections';
 import Link from 'next/link';
-import { BlogListItem } from '@/components';
 
 const links = [
   {
@@ -28,8 +27,8 @@ export default function Home() {
         I&apos;m a frontend developer based in Istanbul. I consider writing and
         explaining things to be the most important part of truly learning a
         subject. I write and share blog posts about JavaScript and my
-        experiences here. I also keep a list of the tv series & movies I&apos;ve
-        watched.
+        experiences here. I also keep a list of the books I&apos;ve been
+        reading.
       </p>
       <span className="text-base md:text-lg mt-8 text-neutral-900 dark:text-neutral-50">
         My latest blog posts:
