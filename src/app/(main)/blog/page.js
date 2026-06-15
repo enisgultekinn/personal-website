@@ -1,10 +1,12 @@
 import { allPosts } from 'content-collections';
 import { BlogListItem } from '@/components';
+import { alternates } from '@/config';
 
 export const metadata = {
   title: 'Blog',
   description:
-    'Notes on JavaScript, experiences and the occasional tangent.'
+    'Notes on JavaScript, experiences and the occasional tangent.',
+  alternates: alternates('/blog')
 };
 
 export default function BlogList() {

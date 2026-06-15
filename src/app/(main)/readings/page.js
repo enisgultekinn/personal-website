@@ -1,8 +1,10 @@
 import { ReadingListItem } from '@/components';
+import { alternates } from '@/config';
 
 export const metadata = {
   title: 'Readings',
-  description: 'A running log of the books I have been reading.'
+  description: 'A running log of the books I have been reading.',
+  alternates: alternates('/readings')
 };
 
 export default function Readings() {
@@ -19,10 +21,10 @@ export default function Readings() {
           </p>
         </div>
         <span className="text-xl md:text-2xl text-neutral-900 dark:text-neutral-50 mt-3">
-          The Brothers Karamazov
+          Alex Ferguson: My Autobiography
         </span>
         <span className="text-xs md:text-sm text-neutral-900 dark:text-neutral-400 mt-3">
-          Fyodor Dostoevsky
+          Alex Ferguson
         </span>
       </div>
 
@@ -39,16 +41,6 @@ const books = [
   {
     title: 'Dune',
     author: 'Frank Herbert',
-    date: new Date('2026-02-19')
-  },
-  {
-    title: 'Snow Crash',
-    author: 'Neal Stephenson',
-    date: new Date('2026-01-19')
-  },
-  {
-    title: 'The Left Hand of Darkness',
-    author: 'Ursula K. Le Guin',
-    date: new Date('2025-12-19')
+    date: new Date('2026-03-19')
   }
 ];

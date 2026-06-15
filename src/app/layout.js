@@ -2,7 +2,7 @@ import { EB_Garamond } from 'next/font/google';
 import './globals.css';
 import { ThemeProvider } from 'next-themes';
 import { JetBrains_Mono } from 'next/font/google';
-import { title, description, url } from '@/config';
+import { title, description, url, alternates } from '@/config';
 
 const ebGaramond = EB_Garamond({
   variable: '--font-eb-garamond',
@@ -23,12 +23,7 @@ export const metadata = {
     template: `%s | ${title}`
   },
   description,
-  alternates: {
-    canonical: '/',
-    types: {
-      'application/rss+xml': `${url}/rss.xml`
-    }
-  },
+  alternates: alternates('/'),
   openGraph: {
     title,
     description,

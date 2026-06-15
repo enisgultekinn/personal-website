@@ -7,3 +7,10 @@ export const author = {
   email: 'enisgltekn@gmail.com',
   link: 'https://enisgultekin.me'
 };
+
+export const alternates = path => ({
+  canonical: path,
+  types: {
+    'application/rss+xml': `${url}/rss.xml`
+  }
+});

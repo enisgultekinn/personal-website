@@ -1,7 +1,7 @@
 import { allPosts } from 'content-collections';
 import { Mdx, ViewTracker } from '@/components';
 import { notFound } from 'next/navigation';
-import { url } from '@/config';
+import { url, alternates } from '@/config';
 
 export async function generateMetadata({ params }) {
   const { slug } = await params;
@@ -12,6 +12,7 @@ export async function generateMetadata({ params }) {
   return {
     title: post.title,
     description: post.description,
+    alternates: alternates(`/blog/${slug}`),
     openGraph: {
       title: post.title,
       description: post.description,

@@ -1,7 +1,10 @@
+import { alternates } from '@/config';
+
 export const metadata = {
   title: 'About Me',
   description:
-    'Frontend developer based in Istanbul, building interfaces with TypeScript and React.'
+    'Frontend developer based in Istanbul, building interfaces with TypeScript and React.',
+  alternates: alternates('/about-me')
 };
 
 export default function AboutMe() {
