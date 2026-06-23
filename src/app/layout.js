@@ -3,6 +3,7 @@ import './globals.css';
 import { ThemeProvider } from 'next-themes';
 import { JetBrains_Mono } from 'next/font/google';
 import { title, description, url, alternates } from '@/config';
+import { ServiceWorkerRegistration } from '@/components';
 
 const ebGaramond = EB_Garamond({
   variable: '--font-eb-garamond',
@@ -16,6 +17,13 @@ const jetBrainsMono = JetBrains_Mono({
   display: 'swap'
 });
 
+export const viewport = {
+  themeColor: [
+    { media: '(prefers-color-scheme: light)', color: '#f5f3ee' },
+    { media: '(prefers-color-scheme: dark)', color: '#171717' }
+  ]
+};
+
 export const metadata = {
   metadataBase: new URL(url),
   title: {
@@ -24,6 +32,19 @@ export const metadata = {
   },
   description,
   alternates: alternates('/'),
+  icons: {
+    icon: [
+      { url: '/favicon.ico', sizes: '32x32' },
+      { url: '/icon-192.png', type: 'image/png', sizes: '192x192' },
+      { url: '/icon-512.png', type: 'image/png', sizes: '512x512' }
+    ],
+    apple: [{ url: '/apple-touch-icon.png', sizes: '180x180' }]
+  },
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: 'default',
+    title
+  },
   openGraph: {
     title,
     description,
@@ -56,6 +77,7 @@ export default function RootLayout({ children }) {
         >
           {children}
         </ThemeProvider>
+        <ServiceWorkerRegistration />
       </body>
     </html>
   );
