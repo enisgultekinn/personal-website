@@ -41,6 +41,6 @@ const books = [
   {
     title: 'Dune',
     author: 'Frank Herbert',
-    date: new Date('2026-03-19')
+    date: new Date('2026-05-19')
   }
 ];
