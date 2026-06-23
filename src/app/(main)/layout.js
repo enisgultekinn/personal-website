@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 const socialLinks = [
   {
-    href: 'https://github.com/enisgultekin',
+    href: 'https://github.com/enisgultekinn',
     label: 'github'
   },
   {

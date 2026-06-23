@@ -1,21 +1,6 @@
 import { allPosts } from 'content-collections';
 import Link from 'next/link';
 
-const links = [
-  {
-    href: 'https://github.com/enisgultekin',
-    label: 'GitHub'
-  },
-  {
-    href: 'https://www.linkedin.com/in/enisgultekin/',
-    label: 'LinkedIn'
-  },
-  {
-    href: 'mailto:enisgultekin@gmail.com',
-    label: 'Email'
-  }
-];
-
 export default function Home() {
   const latestPosts = allPosts
     .sort((a, b) => new Date(b.date) - new Date(a.date))
