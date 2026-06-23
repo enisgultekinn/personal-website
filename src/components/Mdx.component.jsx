@@ -49,7 +49,7 @@ const components = {
   a: CustomLink,
   p: props => (
     <p
-      className="mb-6 leading-relaxed text-neutral-950 dark:text-neutral-50 text-base md:text-lg"
+      className="mb-6 leading-relaxed text-neutral-950 dark:text-neutral-50 text-base md:text-xl"
       {...props}
     >
       {props.children}
@@ -98,7 +98,7 @@ const components = {
   ),
   li: props => (
     <li
-      className="mb-3 leading-relaxed text-neutral-950 dark:text-neutral-100 text-base md:text-lg"
+      className="mb-3 leading-relaxed text-neutral-950 dark:text-neutral-100 text-base md:text-xl"
       {...props}
     >
       {props.children}

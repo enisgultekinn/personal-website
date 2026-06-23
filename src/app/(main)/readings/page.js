@@ -10,7 +10,7 @@ export const metadata = {
 export default function Readings() {
   return (
     <section className="flex flex-col mt-8">
-      <p className="text-base md:text-lg text-neutral-900 dark:text-neutral-400">
+      <p className="text-base md:text-xl text-neutral-900 dark:text-neutral-400">
         A running log of the books I’ve been reading.
       </p>
       <div className="p-6 border rounded-sm flex flex-col mt-8 dark:border-neutral-800 border-neutral-200">

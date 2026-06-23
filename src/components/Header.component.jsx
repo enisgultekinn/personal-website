@@ -39,7 +39,7 @@ const Header = () => {
     <header className="mt-8 md:mt-24">
       <div className="flex flex-row justify-between items-center">
         <Link
-          className="text-lg md:text-2xl font-medium cursor-pointer text-neutral-900 dark:text-neutral-50"
+          className="text-lg md:text-3xl font-medium cursor-pointer text-neutral-900 dark:text-neutral-50"
           href="/"
         >
           Enis Gültekin
@@ -51,7 +51,7 @@ const Header = () => {
                 key={href}
                 href={href}
                 className={classNames(
-                  'relative text-sm md:text-base pb-0.5 group transition-colors duration-300',
+                  'relative text-sm md:text-xl pb-0.5 group transition-colors duration-300',
                   {
                     'text-neutral-900 dark:text-neutral-50':
                       currentPath === href,

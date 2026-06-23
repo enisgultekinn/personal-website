@@ -8,14 +8,14 @@ export default function Home() {
 
   return (
     <section className="flex flex-col">
-      <p className="text-base md:text-lg mt-8  text-neutral-900 dark:text-neutral-50">
+      <p className="text-base md:text-xl mt-8  text-neutral-900 dark:text-neutral-50">
         I&apos;m a frontend developer based in Istanbul. I consider writing and
         explaining things to be the most important part of truly learning a
         subject. I write and share blog posts about JavaScript and my
         experiences here. I also keep a list of the books I&apos;ve been
         reading.
       </p>
-      <span className="text-base md:text-lg mt-8 text-neutral-900 dark:text-neutral-50">
+      <span className="text-xl md:text-xl mt-8 text-neutral-900 dark:text-neutral-50">
         My latest blog posts:
       </span>
       <div className="gap-2 mt-4 flex flex-col">
@@ -23,7 +23,7 @@ export default function Home() {
           <Link
             key={post._meta.path}
             href={`/blog/${post._meta.path}`}
-            className="md:ml-4 ml-2 text-base md:text-lg flex flex-row items-center gap-4 text-neutral-900 dark:text-neutral-50 hover:text-neutral-700 dark:hover:text-neutral-400 transition-colors duration-300"
+            className="md:ml-4 ml-2 text-base md:text-xl flex flex-row items-center gap-4 text-neutral-900 dark:text-neutral-50 hover:text-neutral-700 dark:hover:text-neutral-400 transition-colors duration-300"
           >
             <div className="w-1 h-1 rounded-full bg-neutral-900 dark:bg-neutral-50" />
             {post.title}

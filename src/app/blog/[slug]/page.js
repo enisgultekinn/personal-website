@@ -46,7 +46,7 @@ export default async function Blog({ params }) {
 
   return (
     <section className="mt-8 md:mt-24">
-      <h1 className="md:text-3xl text-2xl font-semibold">{post.title}</h1>
+      <h1 className="md:text-4xl text-2xl font-semibold">{post.title}</h1>
       <div className="flex flex-row items-center gap-2.5 text-neutral-700 dark:text-neutral-400 md:text-base text-sm mt-2  mb-4 md:mb-6">
         <time>
           {new Date(post.date).toLocaleDateString('en-US', {

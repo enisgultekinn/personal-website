@@ -5,7 +5,7 @@ const ReadingListItem = ({ item }) => {
       className="py-4 border-b border-neutral-200 dark:border-neutral-800 flex-row flex items-center group justify-between"
     >
       <div className="flex flex-col translate-x-0 hover:translate-x-2 transition-transform duration-200 flex-1">
-        <span className="text-neutral-900 dark:text-neutral-50 text-base md:text-lg dark:group-hover:text-neutral-200 group-hover:text-neutral-600 transition-colors duration-200">
+        <span className="text-neutral-900 dark:text-neutral-50 text-base md:text-xl dark:group-hover:text-neutral-200 group-hover:text-neutral-600 transition-colors duration-200">
           {item.title}
           <span className="text-xs md:text-sm text-neutral-900 dark:text-neutral-400 ml-2 italic">
             {item.author}
