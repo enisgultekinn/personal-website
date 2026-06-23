@@ -56,6 +56,22 @@ const components = {
     </p>
   ),
   pre: CodeBlock,
+  h1: props => (
+    <h1
+      className="mb-4 mt-8 text-3xl text-neutral-950 dark:text-neutral-100 font-semibold tracking-tight"
+      {...props}
+    >
+      {props.children}
+    </h1>
+  ),
+  h2: props => (
+    <h2
+      className="mb-4 mt-8 text-2xl text-neutral-950 dark:text-neutral-100 font-semibold tracking-tight"
+      {...props}
+    >
+      {props.children}
+    </h2>
+  ),
   h3: props => (
     <h3
       className="mb-4 text-2xl text-neutral-950 dark:text-neutral-100 font-semibold tracking-tight"
